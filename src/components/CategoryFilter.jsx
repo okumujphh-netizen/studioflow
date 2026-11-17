@@ -1,0 +1,29 @@
+
+function CategoryFilter({ category, setCategory }) {
+  const categories = [
+    "All",
+    "Branding",
+    "Web Design",
+    "Photography",
+  ];
+
+  return (
+    <div className="category-filters">
+      {categories.map((item) => (
+        <button
+          key={item}
+          className={
+            category === item
+              ? "category-button active"
+              : "category-button"
+          }
+          onClick={() => setCategory(item)}
+        >
+          {item}
+        </button>
+      ))}
+    </div>
+  );
+}
+
+export default CategoryFilter;
