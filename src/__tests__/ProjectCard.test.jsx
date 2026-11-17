@@ -27,7 +27,7 @@ describe("ProjectCard", () => {
     ).toBeInTheDocument();
   });
 
-  it("opens project details when clicked", () => {
+  it("opens project details when the view button is clicked", () => {
     render(
       <ProjectCard
         project={mockProject}
@@ -36,7 +36,9 @@ describe("ProjectCard", () => {
     );
 
     fireEvent.click(
-      screen.getByText("Studiofolio Website")
+      screen.getByRole("button", {
+        name: "View Studiofolio Website",
+      })
     );
 
     expect(
