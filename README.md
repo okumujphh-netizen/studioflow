@@ -61,7 +61,7 @@ studiofolio/
 ├── package.json
 ├── vite.config.js
 └── README.md
-```
+
 
 ## Installation and Setup
 
@@ -79,27 +79,27 @@ git clone https://github.com/okumujphh-netizen/studioflow.git
 
 ### 2. Navigate into the project
 
-```bash
+
 cd studioflow
-```
+
 
 ### 3. Install dependencies
 
-```bash
+
 npm install
-```
+
 
 ### 4. Start the development server
 
-```bash
+
 npm run dev
-```
+
 
 Open the local URL displayed in your terminal, usually:
 
-```text
+
 http://localhost:5173/
-```
+
 
 ## Available Commands
 
@@ -117,9 +117,9 @@ Studiofolio uses Vitest and React Testing Library for automated component testin
 
 Run:
 
-```bash
+
 npm test
-```
+
 
 Tests can verify component rendering, user interactions and application functionality.
 
