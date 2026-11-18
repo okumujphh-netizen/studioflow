@@ -33,13 +33,23 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build application
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Build Studiofolio
         run: npm run build
 
-      - name: Upload production files
+      - name: Verify production files
+        run: |
+          test -f dist/index.html
+          test -d dist/assets
+          echo "Production files verified:"
+          ls -lah dist
+
+      - name: Upload production build
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist
+          path: dist
 
   deploy:
     environment:
@@ -53,3 +63,4 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
